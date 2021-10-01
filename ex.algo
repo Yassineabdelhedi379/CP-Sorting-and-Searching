@@ -1,0 +1,25 @@
+PROCEDURE param(var n,m:INTEGER)
+VAR 
+ p : INTEGER
+BEGIN
+ p:=n;
+ n:=m; 
+ m:=p;
+END
+
+
+ALGORITHM sorting 
+VAR
+    tab : ARRAY_OF INTEGER;
+    i,j : INTEGER;
+
+BEGIN
+    FOR i FROM 0 TO tab.length[-1] STEP   DO
+        j:=i;
+        WHILE (j>0, tab [j] < tab[j-1]) DO
+            param (tab[j], tab[j-1])
+            j--,
+            
+        END_WHILE
+    END_FOR
+END
